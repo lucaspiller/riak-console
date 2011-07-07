@@ -25,6 +25,18 @@ Get an object from a {bucket,key} pair.
     "13 New Street"
     => true
 
+JSON is automatically demarshalled:
+
+    > get 'addresses', 'jane'
+    content-type: application/json
+    vclock: a85hYGBgzGDKBVIsDBeawjKYEpnyWBm+x3Ud58sCAA==
+    etag: 3NOI4nZuDXlcn8NmrOr1Ra
+    last_modified: 2011-07-07 17:46:47 +0100
+    links:
+    data:
+    {"number"=>13, "street"=>"New Street"}
+    => true
+
 ### Put Object
 
 Store an object at a {bucket,key} pair.
